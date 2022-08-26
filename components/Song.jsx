@@ -11,7 +11,7 @@ function Song({track}) {
         setCurrentTrackId(track.track.id);
         setIsPlaying(!isPlaying);
         grooveApi.play({
-            uris:[track.track.url],
+            uris:[track.track.uri],
         });
     }
 
