@@ -1,5 +1,7 @@
 import Sidebar from '../components/Sidebar'
-import Center from '../components/Center'
+import Center from '../components/Center';
+import Player from "../components/Player"
+
 const Home = () => {
   return (
     <div className="bg-zinc-900 h-screen overflow-hidden">
@@ -7,8 +9,9 @@ const Home = () => {
         <Sidebar/>
         <Center/>
       </main>
-
-      <div>{/* Player */}</div>
+      <div className='sticky bottom-2'>
+        <Player/>
+      </div>
     </div>
   )
 }

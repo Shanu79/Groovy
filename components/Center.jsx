@@ -4,7 +4,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { playlistIdState, playlistState } from "../atoms/playlistAtoms";
 import useGroove from "../hooks/useGroove";
 import { SearchIcon } from "@heroicons/react/outline";
-import Songs from "./Songs"
+import Songs from "./Songs";
 
 function Center() {
   const { data: session } = useSession();
@@ -25,12 +25,12 @@ function Center() {
     playlistId]
   );
   return (
-    <div className="w-full h-screen overflow-y-scroll">
-      <header className="py-5 px-3">
-        <div className="flex text-slate-200">
-          <h1 className="text-5xl pt-3 font-Kaushan text-slate-300">Groovy</h1>
+    <div className="w-full h-screen overflow-y-scroll bg-[#2b1c19] p-7">
+      <header className="py-5 px-3 ">
+        <div className="flex text-[#f8dcd8]">
+          <h1 className="text-5xl pt-3 font-Kaushan text-[#f8dcd8]">Groovy</h1>
           <div className="flex ml-auto items-center gap-7">
-          <button className="flex text-lg font-light space-x-2 hover:text-slate-50">
+          <button className="flex text-lg font-light space-x-2 text-[#ffb4a8] hover:text-[#f8dcd8]">
             <SearchIcon className="h-7 w-7" />
             {<p className="hidden sm:block">Search for your Groove</p>}
           </button>
@@ -45,11 +45,10 @@ function Center() {
         </div>
       </header>
 
-      <div className="pt-11 pl-11 pb-3">
-      <h1 className="text-slate-300 text-4xl sm:text-5xl">{playlist?.name}</h1>
-      </div>
-
+      <div className="bg-[#1d100e] rounded-3xl">
+      <h1 className="text-[#ffb4a8] text-4xl sm:text-5xl pt-11 px-7 sm:pt-16 sm:px-24">{playlist?.name}</h1>
       <Songs/>
+      </div>
     </div>
   );
 }
