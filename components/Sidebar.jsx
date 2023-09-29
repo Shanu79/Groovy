@@ -27,9 +27,10 @@ function Sidebar() {
   }, [session, grooveApi]);
 
   //console.log(playlists);
+  
 
   return (
-    <div className="bg-[#2b1c19] text-rose-100 p-7 text-sm lg:text-lg h-screen hidden md:inline-flex">
+  <div className={`bg-[#2b1c19] text-rose-100 p-7 text-sm lg:text-lg h-screen hidden md:inline-flex`}>
       <div className="my-auto space-y-4">
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
@@ -43,8 +44,6 @@ function Sidebar() {
           <CollectionIcon className="h-5 w-5" />
           <p>Your Library</p>
         </button>
-
-        <hr className="border-t-[0.2px] border-slate-700" />
 
         <button
           className="flex items-center space-x-2
@@ -67,8 +66,6 @@ function Sidebar() {
           <RssIcon className="h-5 w-5" />
           <p>Your Episodes</p>
         </button>
-
-        <hr className="border-t-[0.1px] border-slate-700" />
 
         <div className="pt-7">
         {playlists.map((playlist) => (
