@@ -26,7 +26,7 @@ function Center() {
     playlistId]
   );
   return (
-    <div className="w-full h-screen overflow-y-scroll bg-[#2b1c19] p-7">
+    <div className="w-full h-screen overflow-y-scroll bg-[#2b1c19] p-3 sm:p-7">
       <header className="py-5 px-3 ">
         <div className="flex text-[#f8dcd8]">
           <h1 className="text-5xl pt-3 font-Kaushan text-[#f8dcd8]">Groovy</h1>
