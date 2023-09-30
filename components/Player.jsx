@@ -22,7 +22,7 @@ const Player = () => {
     const fetchCurrentSong = () => {
         if (!songInfo) {
             spotifyApi.getMyCurrentPlayingTrack().then((data) => {
-                console.log("Now Playing: ", data.body?.item);
+                //console.log("Now Playing: ", data.body?.item);
                 setCurrentTrackId(data.body?.item?.id);
 
                 spotifyApi.getMyCurrentPlaybackState().then((data) => {
@@ -98,8 +98,10 @@ const Player = () => {
                         <div className='bg-[#c5afad] hover:bg-[#ab7870] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center hover:cursor-pointer'><Image src={nextIcon} /></div>
                     </div>
                 </div>
-                <div className='flex gap-8 mb-[0.125rem] sm:mb-1'>
-                    <div className='bg-white h-[0.125rem] sm:h-1 w-full my-auto'></div>
+                <div className='flex mb-[0.125rem] sm:mb-1'>
+                    <div className='bg-[#c5afad] h-[0.125rem] rounded-full sm:h-1 w-full my-auto'>
+                    </div>
+                    {/* <span>O</span> */}
                 </div>
             </div>
         </div>

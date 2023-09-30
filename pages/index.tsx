@@ -2,8 +2,10 @@ import Sidebar from '../components/Sidebar'
 import Center from '../components/Center';
 import Player from "../components/Player"
 import Head from 'next/head';
+import useSongInfo from '../hooks/useSongInfo';
 
 const Home = () => {
+  const songInfo=useSongInfo();
   return (
     <>
     <Head>
@@ -14,7 +16,7 @@ const Home = () => {
         <Sidebar/>
         <Center/>
       </main>
-      <div className='sticky bottom-2 w-11/12 sm:w-2/3 mx-auto'>
+      <div className={` ${songInfo?`block`:`hidden`} sticky bottom-2 w-11/12 sm:w-2/3 mx-auto`}>
         <Player/>
       </div>
     </div>

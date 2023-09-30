@@ -7,7 +7,7 @@ function Songs() {
     //console.log(playlist)
   return (
     <div className="text-[#ffb4a8] mx-auto sm:p-16 p-3">
-      <div className="mt-7 grid grid-cols-2 lg:grid-cols-5 gap-9">
+      <div className="mt-7 grid grid-cols-2 lg:grid-cols-4 gap-11">
       {playlist?.tracks.items.map((track)=>(
         <Song key={track.track.id}
             track={track}
