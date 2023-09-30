@@ -5,6 +5,7 @@ import { playlistIdState, playlistState } from "../atoms/playlistAtoms";
 import useGroove from "../hooks/useGroove";
 import { SearchIcon } from "@heroicons/react/outline";
 import Songs from "./Songs";
+import Playlists from "./Playlists";
 
 function Center() {
   const { data: session } = useSession();
@@ -45,9 +46,10 @@ function Center() {
         </div>
       </header>
 
-      <div className="bg-[#1d100e] rounded-3xl mb-24">
-      <h1 className="text-[#ffb4a8] text-4xl sm:text-5xl pt-11 px-7 sm:pt-16 sm:px-24">{playlist?.name}</h1>
-      <Songs/>
+      <div className={`bg-[#1d100e] rounded-3xl mb-24`}>
+        <h1 className="text-[#ffb4a8] text-4xl sm:text-5xl pt-11 px-7 sm:pt-16 sm:px-24">{playlist? playlist.name : `Playlists`}</h1>
+        <Playlists/>
+        <Songs/>
       </div>
     </div>
   );
